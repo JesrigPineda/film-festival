@@ -4,17 +4,259 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Bootstrap css-->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <h1>Hello, Boston</h1>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Watch it Outside</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#films">Films</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#register">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+    <!-- Header -->
+    <header class="main-header">
+      <div class="background-overlay text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-md-12 text-center justify-content-center align-self-center"
+            >
+              <h1 class="display-3">Watch it outside Boston edition</h1>
+              <h3 class="display-4">Discover amazing movies</h3>
+              <a href="#about" class="btn btn-primary btn-lg text-white">
+                See More</a
+              >
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="bg-light text-center">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md m-5">
+            <h2>Great Film Festival</h2>
+            <p>
+              Come and discover incredible movies with your family let's celebrate and promote the love of cinema.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col m-3">
+            <h4>Place</h4>
+            <p>
+              Boston Public Garden
+            </p>
+          </div>
+          <div class="col m-3">
+            <h4>Date</h4>
+            <p>
+              August 5 to 8
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col m-5">
+            <h4>Hour</h4>
+            <p>
+              6 p.m. at midnight
+            </p>
+          </div>
+          <div class="col m-5">
+          <h4>Access</h4>
+          <p>
+            For all ages, it's free, get your ticket with pre-registration
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Films -->
+    <section id="films" class="films text-center">
+      <div class="container p-5">
+        <h1 class="text-white">Films</h1>
+        <p class="text-white">
+          The billboard for the festival
+        </p>
+        <div class="row">
+          <!-- Film -->
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  src="img/film1.jpg"
+                  class="img-fluid"
+                  alt="Film One"
+                />
+                <p class="m-2"><strong>Little Women</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  src="img/film2.jpg"
+                  class="img-fluid"
+                  alt="Film Two"
+                />
+                <p class="m-2"><strong>Knives Out</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  src="img/film3.jpg"
+                  class="img-fluid"
+                  alt="Film Three"
+                />
+                <p class="m-2"><strong>The Kid King</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <img
+                  src="img/film4.jpg"
+                  class="img-fluid"
+                  alt="Film Four"
+                />
+                <p class="m-2"><strong>Theory of Everything</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="films" class=" text-center">
+      <div class="container p-5">
+        <h1>News</h1>
+        <p>
+          The billboard for the festival
+        </p>
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">News</strong>
+                <h3 class="mb-0">Featured post</h3>
+                <div class="mb-1 text-muted">Nov 12</div>
+                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">Ad</strong>
+                <h3 class="mb-0">Post title</h3>
+                <div class="mb-1 text-muted">Nov 11</div>
+                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sign up -->
+    <section id="register" class="bg-light py-5">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-7 text-center border rounded shadow-sm">
+            <h3>Sign up</h3>
+            <p>Register now and save a place at the festival, they are few!</p>
+            <form class="m-4" action="">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-user input-group-text"></i>
+                </div>
+                <input type="text" class="form-control mr-2" placeholder="First Name" />
+                <input type="text" class="form-control " placeholder="Last Name" />
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-envelope input-group-text"></i>
+                </div>
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+              <button class="btn btn-primary btn-lg btn-block">
+                Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer>
+      <div class="container p-3 text-white text-center">
+        <div class="d-flex flex-row justify-content-center">
+          <div class="p-4">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <div class="p-4">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="p-4">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <p>&copy; Watch it Outside 2020</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript-->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
