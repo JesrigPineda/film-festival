@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Watch it outside</title>
     <!-- Bootstrap css-->
     <link
       rel="stylesheet"
@@ -22,10 +22,13 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light mb-md-4 fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="/">Watch it Outside</a>
+        <a class="navbar-brand" href="/">
+        <img src="/img/Logo1.png" height="30" alt=""> 
+        <span>Watch It Outside</span>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,202 +40,285 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#films">Films</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#news">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#register">Register</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#schedule ">Schedule</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#news">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Reservations</a>
+              </li>
           </ul>
         </div>
       </div>
     </nav>
-
+  
     <!-- Header -->
-    <header class="main-header">
+    <header id="home" class="main-header">
       <div class="background-overlay text-white py-5">
-        <div class="container">
+        <div class="container m-5">
           <div class="row">
-            <div
-              class="col-md-12 text-center justify-content-center align-self-center"
-            >
+            <div class="col-md-12 text-center justify-content-center align-self-center">
               <h1 class="display-3">Watch it outside Boston edition</h1>
               <h3 class="display-4">Discover amazing movies</h3>
-              <a href="#about" class="btn btn-primary btn-lg text-white">
-                See More</a
-              >
+               <a class="nav-link" href="#">
+                <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#exampleModal">
+                  Reservations
+                </button>
+              </a>
              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-
+   
     <!-- About -->
-    <section id="about" class="bg-light text-center">
+    <section  id="about" class="text-center p-5">
       <div class="container">
         <div class="row justify-content-md-center">
-          <div class="col-md m-5">
-            <h2>Great Film Festival</h2>
-            <p>
-              Come and discover incredible movies with your family let's celebrate and promote the love of cinema.
+          <div class="col-md">
+            <h2 class="text-center">
+              Boston Outdoor Film Festival
+            </h2>
+            <p class="mt-3">
+              The Boston Outdoor Film Festival (BOFF), is an International, competitive festival. 
+              BOFF mission is to provide a public forum in Boston in order to advance public interest in 
+              films and the independent production of films. To draw worldwide attention to Boston as a 
+              center for cinema. To encourage the rights of all Boston residents to access and experience 
+              the power of independent filmmaking, and to promote artistic excellence and the creative freedom 
+              of artists without censure. Watch It Outside Boston, is a not-for-profit organization.
             </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col m-3">
-            <h4>Place</h4>
-            <p>
-              Boston Public Garden
-            </p>
-          </div>
-          <div class="col m-3">
-            <h4>Date</h4>
-            <p>
-              August 5 to 8
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col m-5">
-            <h4>Hour</h4>
-            <p>
-              6 p.m. at midnight
-            </p>
-          </div>
-          <div class="col m-5">
-          <h4>Access</h4>
-          <p>
-            For all ages, it's free, get your ticket with pre-registration
-          </p>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Films -->
-    <section id="films" class="films text-center">
-      <div class="container p-5">
-        <h1 class="text-white">Films</h1>
-        <p class="text-white">
-          The billboard for the festival
-        </p>
+
+    <!-- Schedule -->
+    <section id="schedule" class="schedule text-center">
+      <div class="container ">
+        <div class="p-5">
+          <h1>Schedule </h1>
+          <p>
+            Come and enjoy with your family outdoors. Here's a great list of movies to watch at the 
+            Boston Public Garden from August 5-8 at 6 p.m. at midnight. Reserve your place, it's free!
+          </p> 
+        </div>
+
         <div class="row">
-          <!-- Film -->
-          <div class="col-lg-3">
-            <div class="card">
-              <div class="card-body">
-                <img
-                  src="img/film1.jpg"
-                  class="img-fluid"
-                  alt="Film One"
-                />
-                <p class="m-2"><strong>Little Women</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="card">
-              <div class="card-body">
-                <img
-                  src="img/film2.jpg"
-                  class="img-fluid"
-                  alt="Film Two"
-                />
-                <p class="m-2"><strong>Knives Out</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="card">
-              <div class="card-body">
-                <img
-                  src="img/film3.jpg"
-                  class="img-fluid"
-                  alt="Film Three"
-                />
-                <p class="m-2"><strong>The Kid King</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="card">
-              <div class="card-body">
-                <img
-                  src="img/film4.jpg"
-                  class="img-fluid"
-                  alt="Film Four"
-                />
-                <p class="m-2"><strong>Theory of Everything</strong></p>
-              </div>
-            </div>
-          </div>
+          <ul class="nav nav-tabs d-flex justify-content-between" id="myTab">
+              <li class="w-25 p-3" role="presentation">
+                  <a id="day1-tab" data-toggle="tab" href="#day1" role="tab" aria-controls="day1" aria-selected="true" class="active">
+                      <div class="card mb-4 ">
+                          <img class="img-fluid" src="/img/little-women.jpg" alt="little">
+                      </div>
+                  </a>
+              </li>
+              <li class="w-25 p-3" role="presentation">
+                  <a id="day1-tab" data-toggle="tab" href="#day2" role="tab" aria-controls="day2" aria-selected="false" class="">
+                      <div class="card mb-4 ">
+                          <img class="img-fluid" src="/img/knives-out.jpg" alt="knives">
+                      </div>
+                  </a>
+              </li>
+              <li class="w-25 p-3" role="presentation">
+                  <a id="day1-tab" data-toggle="tab" href="#day3" role="tab" aria-controls="day3" aria-selected="false" class="">
+                      <div class="card mb-4 ">
+                          <img class="img-fluid" src="/img/the-kid-who-would-be-king.jpg" alt="the-kid-who-would-be-king">
+                      </div>
+                  </a>
+              </li>
+              <li class="w-25 p-3" role="presentation">
+                  <a id="day1-tab" data-toggle="tab" href="#day4" role="tab" aria-controls="day4" aria-selected="false" class="">
+                      <div class="card mb-4 ">
+                          <img class="img-fluid" src="/img/the-theory-of-everything.jpg" alt="the-theory-of-everything">
+                      </div>
+                  </a>
+              </li>
+          </ul>
         </div>
       </div>
+
+          <div class="tab-content">
+                <div class="tab-pane fade little-details p-5 active show" id="day1" role="tabpanel" aria-labelledby="day1-tab">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-md-3">
+                                <img src="img/little-women.jpg" class="img-fluid" alt="little-poster">
+                            </div>
+                              <div class="col-md-9 pl-md-5 pt-md-4">
+                                  <h3>Little Women (2019)</h3>
+                                  <ul class="d-inline-flex">
+                                      <li class="mr-4">Drama, Romance</li>
+                                      <li>2h 15min</li>
+                                  </ul>
+                                    <div class="movie-dates">
+                                        <span class="badge badge-pill badge-success">Aug 5<sup>th</sup> - 6 p.m</span>
+                                        <span class="badge badge-pill badge-success">Aug 6<sup>th</sup> - 8 p.m</span>
+                                        <span class="badge badge-pill badge-success">Aug 7<sup>th</sup> - 10 p.m</span>
+                                    </div>
+                                  <h5 class="mt-4">Overview</h5>
+                                  <p>Four sisters come of age in America in the aftermath of the Civil War.</p>
+                                  <a class="btn btn-success btn-lg mt-md-4 rounded-pill btn-movie" href="https://www.youtube.com/watch?v=AST2-4db4ic" role="button" data-fancybox="">
+                                    <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
+                                  </a>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade knives-details p-5" id="day2" role="tabpanel" aria-labelledby="day2-tab">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-md-3">
+                                <img src="/img/knives-out.jpg" class="img-fluid" alt="knives-poster">
+                            </div>
+                            <div class="col-md-9 pl-md-5 pt-md-4">
+                                <h3>Knives Out (2019)</h3>
+                                <ul class="d-inline-flex">
+                                    <li class="mr-4">Mystery, Thriller, Comedy, Drama, Crime</li>
+                                    <li>2h 11min</li>
+                                </ul>
+                                <div class="movie-dates">
+                                    <span class="badge badge-warning">Aug 6<sup>th</sup> - 10 p.m</span>
+                                    <span class="badge badge-warning">Aug 7<sup>th</sup> - 8 p.m</span>
+                                    <span class="badge badge-warning">Aug 8<sup>th</sup> - 6 p.m</span>
+                                </div>
+                                <h5 class="mt-4">Overview</h5>
+                                <p>When renowned crime novelist Harlan Thrombey is found dead at his estate 
+                                  just after his 85th birthday, the inquisitive and debonair Detective Benoit 
+                                  Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family 
+                                  to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies 
+                                  to uncover the truth behind Harlan's untimely death.</p>
+                                <a class="btn btn-warning btn-lg mt-md-4 rounded-pill btn-movie" href="https://youtu.be/qGqiHJTsRkQ" role="button" data-fancybox="">
+                                  <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade the-kid-details p-5" id="day3" role="tabpanel" aria-labelledby="day3-tab">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-md-3">
+                                <img src="/img/the-kid-who-would-be-king.jpg" class="img-fluid" alt="the-kid-who-would-be-king-poster">
+                            </div>
+                            <div class="col-md-9 pl-md-5 pt-md-4">
+                                <h3>The Kid Who Would Be King (2019)</h3>
+                                <ul class="d-inline-flex">
+                                    <li class="mr-4">Action, Adventure, Fantasy, Family</li>
+                                    <li>2h </li>
+                                </ul>
+                                <div class="movie-dates">
+                                    <span class="badge badge-danger">Aug 5<sup>th</sup> - 8 p.m</span>
+                                    <span class="badge badge-danger">Aug 6<sup>th</sup> - 6 p.m</span>
+                                    <span class="badge badge-danger">Aug 8<sup>th</sup> - 10 p.m</span>
+                                </div>
+                                <h5 class="mt-4">Overview</h5>
+                                <p>Old-school magic meets the modern world when young Alex stumbles upon the mythical sword Excalibur. 
+                                  He soon unites his friends and enemies, and they become knights who join forces with the legendary wizard Merlin. 
+                                  Together, they must save mankind from the wicked enchantress Morgana and her army of supernatural warriors.</p>
+                                <a class="btn btn-danger btn-lg mt-md-4 rounded-pill btn-movie" href="https://youtu.be/AKs7vYl_bAE" role="button" data-fancybox="">
+                                  <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
+                                </a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade the-theory-details p-5" id="day4" role="tabpanel" aria-labelledby="day4-tab">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-md-3">
+                                <img src="/img/the-theory-of-everything.jpg" class="img-fluid rounded" alt="the-theory-of-everything-poster">
+                            </div>
+                            <div class="col-md-9 pl-md-5 pt-md-4">
+                                <h3>The Theory of Everything (2014)</h3>
+                                <ul class="d-inline-flex">
+                                    <li class="mr-4">Drama, Romance</li>
+                                    <li>2h 3min</li>
+                                </ul>
+                                <div class="movie-dates">
+                                    <span class="badge badge-primary">Aug 5<sup>th</sup> - 10 p.m</span>
+                                    <span class="badge badge-primary">Aug 7<sup>th</sup> - 6 p.m</span>
+                                    <span class="badge badge-primary">Aug 8<sup>th</sup> - 8 p.m</span>
+                                </div>
+                                <h5 class="mt-4">Overview</h5>
+                                <p>The Theory of Everything is the extraordinary story of one of the world’s 
+                                  greatest living minds, the renowned astrophysicist Stephen Hawking, who falls 
+                                  deeply in love with fellow Cambridge student Jane Wilde.
+                                </p>
+                                <a class="btn btn-primary btn-lg mt-md-4 rounded-pill btn-movie" href="https://youtu.be/Salz7uGp72c" role="button" data-fancybox="">
+                                  <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
+                                </a>
+                           </div>
+                     </div>
+                </div>
+          </div>
+       </div>
     </section>
 
     <!-- News -->
-    <section id="films" class=" text-center">
+    <section id="news" class="text-center">
       <div class="container p-5">
-        <h1>News</h1>
-        <p>
-          The billboard for the festival
-        </p>
+        <h1 class="m-5">News and Announcements</h1>
         <div class="row mb-2">
           <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">News</strong>
-                <h3 class="mb-0">Featured post</h3>
-                <div class="mb-1 text-muted">Nov 12</div>
-                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <div class="col p-4 d-flex flex-column position-static news">
+                <h5 class="mb-0">BUFF22 is Postponed</h5>
+                <div class="mb-1 text-muted">March 13</div>
+                <p class="card-text mb-auto">Due to growing health concerns surrounding the COVID-19 virus, it's clear that we can't, in good conscience, go on with this year's festival as scheduled.</p>
+                <a href="#" class="stretched-link"><strong>Continue reading</strong></a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="/img/buff2020.jpg" width="200" height="250" alt="">
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-success">Ad</strong>
-                <h3 class="mb-0">Post title</h3>
-                <div class="mb-1 text-muted">Nov 11</div>
-                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <div class="col p-4 d-flex flex-column position-static news">
+                <h5 class="mb-0">Boston Sci-Fi 2020</h5>
+                <div class="mb-1 text-muted">January 27</div>
+                <p class="mb-auto">BUFF is proud to co-present three fantastic genre features at this year's Boston Sci-Fi Film Festival, which takes place February 7-17, 2020.</p>
+                <a href="#" class="stretched-link"><strong>Continue reading</strong></a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src="/img/bos-sci-fi-2020.jpg" width="200" height="250" alt="">
               </div>
             </div>
           </div>
         </div>
+        <a href="https://boston.cbslocal.com/" target="_blank" class="d-block text-center mx-auto"><img src="/img/logo_boston.png" class="img-fluid" alt="CBS-boston">
+        </a>
       </div>
     </section>
 
-    <!-- Sign up -->
-    <section id="register" class="bg-light py-5">
+    <!-- Reservations -->
+    <section id="reservations" class="news py-5">
       <div class="container">
         <div class="row justify-content-md-center">
-          <div class="col-md-7 text-center border rounded shadow-sm">
-            <h3>Sign up</h3>
-            <p>Register now and save a place at the festival, they are few!</p>
-            <form class="m-4" action="">
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <i class="fas fa-user input-group-text"></i>
-                </div>
-                <input type="text" class="form-control mr-2" placeholder="First Name" />
-                <input type="text" class="form-control " placeholder="Last Name" />
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <i class="fas fa-envelope input-group-text"></i>
-                </div>
-                <input type="email" class="form-control" placeholder="Email" />
-              </div>
-              <button class="btn btn-primary btn-lg btn-block">
-                Register
-              </button>
-            </form>
+          <div class="">
+            <h3 class="about-us text-center">
+              Boston Public Garden
+            </h3>
+            <p class="mt-3 text-center">Public Garden - 4 Charles St, Boston, MA 02108</p>
+            <p class="text-center">Boston’s Public Garden is the groomed and formal younger 
+              cousin to the more casual and boisterous Boston Common. The first public botanical garden in America, 
+              its form, plantings, and statuary evoke its Victorian heritage. This green and flowering oasis in the 
+              heart of a great metropolis has become a Boston icon. No visit would be complete without a stroll in the
+              Garden and a voyage on one of its Swan Boats.</p>
+            <a href="https://friendsofthepublicgarden.org/our-parks/the-garden/" class="d-block text-center mx-auto" target="_blank">
+              <img src="/img/garden-logo.png"  class="img-fluid" alt="garden-boston">
+            </a>
           </div>
         </div>
       </div>
@@ -240,7 +326,29 @@
 
     <!-- Footer-->
     <footer>
-      <div class="container p-3 text-white text-center">
+        <div>
+            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4169.75173578611!2d-71.07116921544869!3d42.35404082733324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3709e822b60bb%3A0xcbd77f0b5e16e701!2sPublic%20Garden!5e0!3m2!1str!2str!4v1593015397830!5m2!1str!2str" width="100%" height="400" allowfullscreen="" aria-hidden="false" style="border:0" tabindex="0"></iframe>
+        </div>
+      <div class="container p-3 text-center">
+        <div class="col-xs-12">
+          <ul class="nav navbar-light justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#schedule ">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reservations">Reservations</a>
+            </li>
+          </ul>
+        </div>
         <div class="d-flex flex-row justify-content-center">
           <div class="p-4">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -251,11 +359,109 @@
           <div class="p-4">
             <a href="#"><i class="fab fa-instagram"></i></a>
           </div>
+          <div class="p-4">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="p-4">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
         <p>&copy; Watch it Outside 2020</p>
       </div>
     </footer>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pre-Registeration Form</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="m-4" action="">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-user input-group-text"></i>
+                </div>
+                <input type="text" class="form-control" placeholder="Full Name" />
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-envelope input-group-text"></i>
+                </div>
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-ticket-alt input-group-text"></i>
+                </div>
+                <select name="day" class="form-control">
+                  <option value="0">Select a Movie</option>
+                  <optgroup label="Aug 5th">
+                    <option value="The Theory of Everything"
+                      >The Theory of Everything</option
+                    >
+                    <option value="The Kid Who Would Be King"
+                      >The Kid Who Would Be King</option
+                    >
+                    <option value="Little Women">Little Women</option>
+                  </optgroup>
+                  <optgroup label="Aug 6th ">
+                    <option value="The Kid Who Would Be King"
+                      >The Kid Who Would Be King</option
+                    >
+                    <option value="Little Women">Little Women</option>
+                    <option value="Knives Out">Knives Out</option>
+                  </optgroup>
+                  <optgroup label="Aug 7th ">
+                    <option value="The Theory of Everything"
+                      >The Theory of Everything</option
+                    >
+                    <option value="Knives Out">Knives Out</option>
+                    <option value="Little Women">Little Women</option>
+                  </optgroup>
+                  <optgroup label="Aug 8th ">
+                    <option value="Knives Out">Knives Out</option>
+                    <option value="The Theory of Everything"
+                      >The Theory of Everything</option
+                    >
+                    <option value="The Kid Who Would Be King"
+                      >The Kid Who Would Be King</option
+                    >
+                  </optgroup>
+                </select>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-users input-group-text"></i>
+                </div>
+                <select name="seats" class="form-control">
+                  <option value="0"># of seats</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-warning btn-lg btn-block">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap JavaScript-->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

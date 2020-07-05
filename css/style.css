@@ -1,10 +1,35 @@
-.navbar {
-  box-shadow: 2px 2px 5px #000;
-  opacity: 0.9;
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #c2b97a;
+  font-weight: 500;
 }
 
-.navbar .nav-item .nav-link {
-  color: #fff;
+a {
+  color: #212121;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.navbar {
+  background-color: #ccbc43;
+  box-shadow: 2px 2px 5px #000;
+}
+
+.navbar-brand {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
 }
 
 .main-header {
@@ -16,14 +41,60 @@
 
 .background-overlay {
   position: absolute;
-  background: rgba(0, 102, 255, 0.15);
+  background: rgba(252, 248, 179, 0.15);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
 
-.films,
+.little-details {
+  background: linear-gradient(
+      to right,
+      rgb(13, 102, 25),
+      rgba(20.39%, 22.35%, 29.02%, 0.55)
+    ),
+    url(/img/bg-little-women.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.knives-details {
+  background: linear-gradient(
+      to right,
+      rgb(135, 138, 46),
+      rgba(20.39%, 22.35%, 29.02%, 0.75)
+    ),
+    url(/img/bg-knives-out.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.the-kid-details {
+  background: linear-gradient(
+      to right,
+      rgb(199, 52, 52),
+      rgba(20.39%, 22.35%, 29.02%, 0.75)
+    ),
+    url(/img/bg-the-kid-who-would-be-king.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.the-theory-details {
+  background: linear-gradient(
+      to right,
+      rgb(46, 97, 138),
+      rgba(20.39%, 22.35%, 29.02%, 0.75)
+    ),
+    url(/img/bg-the-theory-of-everything.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.schedule,
+.reservations,
+.news,
 footer {
-  background: #343a40;
+  background: #ccbc43;
 }
