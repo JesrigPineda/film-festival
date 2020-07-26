@@ -18,17 +18,24 @@
       integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
       crossorigin="anonymous"
     />
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
     <!-- Custom Css -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-light mb-md-4 fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="/">
-        <img src="/img/Logo1.png" height="30" alt=""> 
+        <img src="./img/Logo.png" height="30" alt=""> 
         <span>Watch It Outside</span>
         </a>
+        <button type="button" class="btn btn-m btn-lg" data-toggle="modal" data-target="#formModal">
+          <i class="fas fa-ticket-alt input-group-text"></i>
+        </button> 
         <button
           class="navbar-toggler"
           type="button"
@@ -40,8 +47,8 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto navb-collapse">
               <li class="nav-item">
                 <a class="nav-link" href="#home">Home</a>
               </li>
@@ -52,10 +59,13 @@
                 <a class="nav-link" href="#schedule ">Schedule</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#news">News</a>
+                <a class="nav-link" href="#announcements">Announcements</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Reservations</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#formModal">Reservations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
           </ul>
         </div>
@@ -65,19 +75,17 @@
     <!-- Header -->
     <header id="home" class="main-header">
       <div class="background-overlay text-white py-5">
-        <div class="container m-5">
-          <div class="row">
-            <div class="col-md-12 text-center justify-content-center align-self-center">
-              <h1 class="display-3">Watch it outside Boston edition</h1>
-              <h3 class="display-4">Discover amazing movies</h3>
-               <a class="nav-link" href="#">
-                <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#exampleModal">
-                  Reservations
-                </button>
-              </a>
+        <div class="container h-100">
+            <div class="text-center justify-content-center align-items-center d-flex h-100">
+              <div>
+              <h1 class="font-hero-h1"> Watch it outside Boston edition</h1>
+              <h3 class="font-hero-h3">Discover amazing movies</h3>   
+                <button type="button" class="btn btn-hero btn-lg" data-toggle="modal" data-target="#formModal">
+                    Reservations
+                </button>                         
+            </div>
              </div>
             </div>
-          </div>
         </div>
       </div>
     </header>
@@ -86,18 +94,21 @@
     <section  id="about" class="text-center p-5">
       <div class="container">
         <div class="row justify-content-md-center">
-          <div class="col-md">
+          <div class="col-md-8 order-1 order-md-2">
             <h2 class="text-center">
-              Boston Outdoor Film Festival
+              Boston Outside Film Festival
             </h2>
             <p class="mt-3">
-              The Boston Outdoor Film Festival (BOFF), is an International, competitive festival. 
-              BOFF mission is to provide a public forum in Boston in order to advance public interest in 
-              films and the independent production of films. To draw worldwide attention to Boston as a 
-              center for cinema. To encourage the rights of all Boston residents to access and experience 
-              the power of independent filmmaking, and to promote artistic excellence and the creative freedom 
-              of artists without censure. Watch It Outside Boston, is a not-for-profit organization.
+              The Watch It Outside Boston Edition is an international film festival. 
+              Its mission is to provide a public forum in Boston to promote public interest 
+              in film and independent film production. To draw world attention to Boston as a Film Center. 
+              Encourage the rights of all Boston residents to access and experience The Power of Independent 
+              Cinema and to promote artistic excellence and creative freedom for uncensored artists. 
+              Watch It Outside is a non-profit organization.
             </p>
+          </div>
+          <div class="col-md-4 order-2 order-md-1 text-center mb-4 mb-md-0">
+            <img src="./img/festivities.svg" class="img-fluid" height="300" alt="">
           </div>
         </div>
       </div>
@@ -116,31 +127,31 @@
 
         <div class="row">
           <ul class="nav nav-tabs d-flex justify-content-between" id="myTab">
-              <li class="w-25 p-3" role="presentation">
-                  <a id="day1-tab" data-toggle="tab" href="#day1" role="tab" aria-controls="day1" aria-selected="true" class="active">
+              <li class="w-25 p-2 p-md-3" role="presentation">
+                  <a id="movie-tab" data-toggle="tab" href="#movie1" role="tab" aria-controls="movie1" aria-selected="true" class="active">
                       <div class="card mb-4 ">
-                          <img class="img-fluid" src="/img/little-women.jpg" alt="little">
+                          <img class="img-fluid rounded" src="./img/little-women.jpg" alt="little">
                       </div>
                   </a>
               </li>
-              <li class="w-25 p-3" role="presentation">
-                  <a id="day1-tab" data-toggle="tab" href="#day2" role="tab" aria-controls="day2" aria-selected="false" class="">
+              <li class="w-25 p-2 p-md-3" role="presentation">
+                  <a id="movie-tab" data-toggle="tab" href="#movie2" role="tab" aria-controls="movie2" aria-selected="false" class="">
                       <div class="card mb-4 ">
-                          <img class="img-fluid" src="/img/knives-out.jpg" alt="knives">
+                          <img class="img-fluid rounded" src="./img/knives-out.jpg" alt="knives">
                       </div>
                   </a>
               </li>
-              <li class="w-25 p-3" role="presentation">
-                  <a id="day1-tab" data-toggle="tab" href="#day3" role="tab" aria-controls="day3" aria-selected="false" class="">
+              <li class="w-25 p-2 p-md-3" role="presentation">
+                  <a id="movie-tab" data-toggle="tab" href="#movie3" role="tab" aria-controls="movie3" aria-selected="false" class="">
                       <div class="card mb-4 ">
-                          <img class="img-fluid" src="/img/the-kid-who-would-be-king.jpg" alt="the-kid-who-would-be-king">
+                          <img class="img-fluid rounded" src="./img/the-kid-who-would-be-king.jpg" alt="the-kid-who-would-be-king">
                       </div>
                   </a>
               </li>
-              <li class="w-25 p-3" role="presentation">
-                  <a id="day1-tab" data-toggle="tab" href="#day4" role="tab" aria-controls="day4" aria-selected="false" class="">
+              <li class="w-25 p-2 p-md-3" role="presentation">
+                  <a id="movie-tab" data-toggle="tab" href="#movie4" role="tab" aria-controls="movie4" aria-selected="false" class="">
                       <div class="card mb-4 ">
-                          <img class="img-fluid" src="/img/the-theory-of-everything.jpg" alt="the-theory-of-everything">
+                          <img class="img-fluid rounded" src="./img/the-theory-of-everything.jpg" alt="the-theory-of-everything">
                       </div>
                   </a>
               </li>
@@ -149,11 +160,11 @@
       </div>
 
           <div class="tab-content">
-                <div class="tab-pane fade little-details p-5 active show" id="day1" role="tabpanel" aria-labelledby="day1-tab">
+                <div class="tab-pane fade little-details p-5 active show" id="movie1" role="tabpanel" aria-labelledby="movie-tab">
                     <div class="container">
                         <div class="row ">
                             <div class="col-md-3">
-                                <img src="img/little-women.jpg" class="img-fluid" alt="little-poster">
+                                <img src="./img/little-women.jpg" class="img-fluid rounded" alt="little-poster">
                             </div>
                               <div class="col-md-9 pl-md-5 pt-md-4">
                                   <h3>Little Women (2019)</h3>
@@ -168,18 +179,18 @@
                                     </div>
                                   <h5 class="mt-4">Overview</h5>
                                   <p>Four sisters come of age in America in the aftermath of the Civil War.</p>
-                                  <a class="btn btn-success btn-lg mt-md-4 rounded-pill btn-movie" href="https://www.youtube.com/watch?v=AST2-4db4ic" role="button" data-fancybox="">
+                                  <a class="btn btn-success btn-lg mt-md-4 rounded-pill" href="https://youtu.be/AST2-4db4ic" data-fancybox>
                                     <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
                                   </a>
                               </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade knives-details p-5" id="day2" role="tabpanel" aria-labelledby="day2-tab">
+                <div class="tab-pane fade knives-details p-5" id="movie2" role="tabpanel" aria-labelledby="movie-tab">
                     <div class="container">
                         <div class="row ">
                             <div class="col-md-3">
-                                <img src="/img/knives-out.jpg" class="img-fluid" alt="knives-poster">
+                                <img src="./img/knives-out.jpg" class="img-fluid rounded" alt="knives-poster">
                             </div>
                             <div class="col-md-9 pl-md-5 pt-md-4">
                                 <h3>Knives Out (2019)</h3>
@@ -198,18 +209,18 @@
                                   Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family 
                                   to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies 
                                   to uncover the truth behind Harlan's untimely death.</p>
-                                <a class="btn btn-warning btn-lg mt-md-4 rounded-pill btn-movie" href="https://youtu.be/qGqiHJTsRkQ" role="button" data-fancybox="">
+                                  <a class="btn btn-success btn-lg mt-md-4 rounded-pill" href="https://youtu.be/qGqiHJTsRkQ" data-fancybox>
                                   <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
-                                </a>
+                                  </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade the-kid-details p-5" id="day3" role="tabpanel" aria-labelledby="day3-tab">
+                <div class="tab-pane fade the-kid-details p-5" id="movie3" role="tabpanel" aria-labelledby="movie3-tab">
                     <div class="container">
                         <div class="row ">
                             <div class="col-md-3">
-                                <img src="/img/the-kid-who-would-be-king.jpg" class="img-fluid" alt="the-kid-who-would-be-king-poster">
+                                <img src="./img/the-kid-who-would-be-king.jpg" class="img-fluid rounded" alt="the-kid-who-would-be-king-poster">
                             </div>
                             <div class="col-md-9 pl-md-5 pt-md-4">
                                 <h3>The Kid Who Would Be King (2019)</h3>
@@ -226,18 +237,18 @@
                                 <p>Old-school magic meets the modern world when young Alex stumbles upon the mythical sword Excalibur. 
                                   He soon unites his friends and enemies, and they become knights who join forces with the legendary wizard Merlin. 
                                   Together, they must save mankind from the wicked enchantress Morgana and her army of supernatural warriors.</p>
-                                <a class="btn btn-danger btn-lg mt-md-4 rounded-pill btn-movie" href="https://youtu.be/AKs7vYl_bAE" role="button" data-fancybox="">
-                                  <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
-                                </a> 
+                                  <a class="btn btn-success btn-lg mt-md-4 rounded-pill" href="https://youtu.be/AKs7vYl_bAE" data-fancybox>
+                                    <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
+                                  </a> 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade the-theory-details p-5" id="day4" role="tabpanel" aria-labelledby="day4-tab">
+                <div class="tab-pane fade the-theory-details p-5" id="movie4" role="tabpanel" aria-labelledby="movie4-tab">
                     <div class="container">
                         <div class="row ">
                             <div class="col-md-3">
-                                <img src="/img/the-theory-of-everything.jpg" class="img-fluid rounded" alt="the-theory-of-everything-poster">
+                                <img src="./img/the-theory-of-everything.jpg" class="img-fluid rounded" alt="the-theory-of-everything-poster">
                             </div>
                             <div class="col-md-9 pl-md-5 pt-md-4">
                                 <h3>The Theory of Everything (2014)</h3>
@@ -255,7 +266,7 @@
                                   greatest living minds, the renowned astrophysicist Stephen Hawking, who falls 
                                   deeply in love with fellow Cambridge student Jane Wilde.
                                 </p>
-                                <a class="btn btn-primary btn-lg mt-md-4 rounded-pill btn-movie" href="https://youtu.be/Salz7uGp72c" role="button" data-fancybox="">
+                                <a class="btn btn-success btn-lg mt-md-4 rounded-pill" href="https://youtu.be/Salz7uGp72c" data-fancybox>
                                   <i class="fas fa-play"></i> <span class="btn-text">Trailer</span>
                                 </a>
                            </div>
@@ -265,50 +276,51 @@
        </div>
     </section>
 
-    <!-- News -->
-    <section id="news" class="text-center">
-      <div class="container p-5">
-        <h1 class="m-5">News and Announcements</h1>
+    <!-- Announcements -->
+    <section id="announcements" class="text-center">
+      <div class="container">
+        <h1 class="my-5">Announcements</h1>
         <div class="row mb-2">
           <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static news">
+              <div class="col p-4 d-flex flex-column position-static announcements">
                 <h5 class="mb-0">BUFF22 is Postponed</h5>
                 <div class="mb-1 text-muted">March 13</div>
                 <p class="card-text mb-auto">Due to growing health concerns surrounding the COVID-19 virus, it's clear that we can't, in good conscience, go on with this year's festival as scheduled.</p>
                 <a href="#" class="stretched-link"><strong>Continue reading</strong></a>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <img src="/img/buff2020.jpg" width="200" height="250" alt="">
+                <img src="./img/buff22.jpg" width="200" height="250" alt="">
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static news">
+              <div class="col p-4 d-flex flex-column position-static announcements">
                 <h5 class="mb-0">Boston Sci-Fi 2020</h5>
                 <div class="mb-1 text-muted">January 27</div>
                 <p class="mb-auto">BUFF is proud to co-present three fantastic genre features at this year's Boston Sci-Fi Film Festival, which takes place February 7-17, 2020.</p>
                 <a href="#" class="stretched-link"><strong>Continue reading</strong></a>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <img src="/img/bos-sci-fi-2020.jpg" width="200" height="250" alt="">
+                <img src="./img/bos-sci-fi-20.png" width="200" height="250" alt="">
               </div>
             </div>
           </div>
         </div>
-        <a href="https://boston.cbslocal.com/" target="_blank" class="d-block text-center mx-auto"><img src="/img/logo_boston.png" class="img-fluid" alt="CBS-boston">
+        <a href="https://boston.cbslocal.com/" target="_blank" class="d-block text-center mx-auto mb-4">
+          <img src="./img/logo_boston.png" class="img-fluid" alt="CBS-boston">
         </a>
       </div>
     </section>
 
-    <!-- Reservations -->
-    <section id="reservations" class="news py-5">
+    <!-- EventSpace -->
+    <section id="eventspace" class="announcements py-5">
       <div class="container">
         <div class="row justify-content-md-center">
-          <div class="">
-            <h3 class="about-us text-center">
-              Boston Public Garden
+          <div class="col-md-8 order-2 order-md-1">
+            <h3 class="text-center">
+              Event Space
             </h3>
             <p class="mt-3 text-center">Public Garden - 4 Charles St, Boston, MA 02108</p>
             <p class="text-center">Boston’s Public Garden is the groomed and formal younger 
@@ -316,16 +328,19 @@
               its form, plantings, and statuary evoke its Victorian heritage. This green and flowering oasis in the 
               heart of a great metropolis has become a Boston icon. No visit would be complete without a stroll in the
               Garden and a voyage on one of its Swan Boats.</p>
-            <a href="https://friendsofthepublicgarden.org/our-parks/the-garden/" class="d-block text-center mx-auto" target="_blank">
-              <img src="/img/garden-logo.png"  class="img-fluid" alt="garden-boston">
+            <a href="https://friendsofthepublicgarden.org/our-parks/the-garden/" class="d-block text-center mx-auto " target="_blank">
+              <img src="./img/garden-logo.png"  class="img-fluid" alt="garden-boston">
             </a>
+          </div>
+          <div class="col-md-4 order-1 order-md-2 text-center mb-4 mb-md-0">
+            <img src="./img/tree.png" class="img-fluid" height="300" alt="">
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer-->
-    <footer>
+    <footer id="contact">
         <div>
             <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4169.75173578611!2d-71.07116921544869!3d42.35404082733324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3709e822b60bb%3A0xcbd77f0b5e16e701!2sPublic%20Garden!5e0!3m2!1str!2str!4v1593015397830!5m2!1str!2str" width="100%" height="400" allowfullscreen="" aria-hidden="false" style="border:0" tabindex="0"></iframe>
         </div>
@@ -342,64 +357,64 @@
               <a class="nav-link" href="#schedule ">Schedule</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#news">News</a>
+              <a class="nav-link" href="#announcements">Announcements</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#reservations">Reservations</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Reservations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
         <div class="d-flex flex-row justify-content-center">
           <div class="p-4">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://facebook.com" target="_blank" ><i class="fab fa-facebook-f"></i></a>
           </div>
           <div class="p-4">
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://twitter.com" target="_blank" ><i class="fab fa-twitter"></i></a>
           </div>
           <div class="p-4">
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://instagram.com" target="_blank" ><i class="fab fa-instagram"></i></a>
           </div>
           <div class="p-4">
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-          <div class="p-4">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" ><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <p>&copy; Watch it Outside 2020</p>
       </div>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Registeration Form -->
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Pre-Registeration Form</h5>
+            <h5 class="modal-title" id="formModalLabel">Pre-Registeration Form</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <form class="m-4" action="">
+          <div class="modal-body">            
+            <form>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <i class="fas fa-user input-group-text"></i>
                 </div>
-                <input type="text" class="form-control" placeholder="Full Name" />
+                <input type="text" class="form-control" placeholder="Full Name"  required/>
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <i class="fas fa-envelope input-group-text"></i>
                 </div>
-                <input type="email" class="form-control" placeholder="Email" />
+                <input type="email" class="form-control" placeholder="Email" required/>
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <i class="fas fa-ticket-alt input-group-text"></i>
                 </div>
-                <select name="day" class="form-control">
-                  <option value="0">Select a Movie</option>
+                <select name="day" class="form-control" required>
+                  <option selected disabled value="" required>Select a Movie</option>
                   <optgroup label="Aug 5th">
                     <option value="The Theory of Everything"
                       >The Theory of Everything</option
@@ -438,8 +453,8 @@
                 <div class="input-group-prepend">
                   <i class="fas fa-users input-group-text"></i>
                 </div>
-                <select name="seats" class="form-control">
-                  <option value="0"># of seats</option>
+                <select name="seats" class="form-control" required>
+                  <option selected disabled value=""># of seats</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -452,31 +467,30 @@
                   <option value="10">10</option>
                 </select>
               </div>
-            </form>
+         
           </div>
           <div class="modal-footer">
-            <button class="btn btn-warning btn-lg btn-block">
+            <button type="submit" class="btn btn-warning btn-md rounded">
               Submit
             </button>
           </div>
+         </form>
         </div>
       </div>
     </div>
+
     <!-- Bootstrap JavaScript-->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- Change Color On Scroll Jquery-->
+    <script>
+      $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 500);
+      });
+    </script>
+
   </body>
 </html>
